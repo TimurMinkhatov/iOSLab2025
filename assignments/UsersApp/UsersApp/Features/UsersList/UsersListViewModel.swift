@@ -13,7 +13,7 @@ import Observation
 final class UsersListViewModel {
   var users: [User] = []
   var isLoading = false
-  var errorMessage: String? = nil
+  var errorMessage: String?
 
   private let service: UsersService
 

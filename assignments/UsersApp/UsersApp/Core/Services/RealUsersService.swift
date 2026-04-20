@@ -7,6 +7,10 @@
 
 import Foundation
 
+enum NetworkError: Error {
+    case invalidURL
+}
+
 @MainActor
 final class RealUsersService: UsersService {
   private let cache = UsersCache()
@@ -50,7 +54,7 @@ final class RealUsersService: UsersService {
 
     let task = Task<User, Error> {
       try Task.checkCancellation()
-      let url = URL(string: "https://jsonplaceholder.typicode.com/users/\(id)")!
+      guard let url = URL(string: "https://jsonplaceholder.typicode.com/users/\(id)") else { throw NetworkError.invalidURL }
       let (data, _) = try await URLSession.shared.data(from: url)
       try Task.checkCancellation()
       let user = try JSONDecoder().decode(User.self, from: data)

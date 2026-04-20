@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Environment(\.usersService) private var service
+    @Environment(\.usersService)
+    private var service
 
     var body: some View {
         UsersListView(service: service)

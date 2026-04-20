@@ -13,12 +13,12 @@ final class ProfileViewController: UIViewController {
   private let user: User
 
   private let avatarView: UIImageView = {
-    let iv = UIImageView()
-    iv.contentMode = .scaleAspectFill
-    iv.clipsToBounds = true
-    iv.layer.cornerRadius = 44
-    iv.translatesAutoresizingMaskIntoConstraints = false
-    return iv
+    let imageView = UIImageView()
+      imageView.contentMode = .scaleAspectFill
+      imageView.clipsToBounds = true
+      imageView.layer.cornerRadius = 44
+      imageView.translatesAutoresizingMaskIntoConstraints = false
+    return imageView
   }()
 
   private let cardView: UIView = {
@@ -174,7 +174,8 @@ final class ProfileViewController: UIViewController {
 
   // MARK: - Actions
 
-  @objc private func followTapped() {
+  @objc 
+    private func followTapped() {
     let isFollowing = followButton.configuration?.title == "Unfollow"
     var config = followButton.configuration
     config?.title = isFollowing ? "Follow" : "Unfollow"

@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		39E35D692F96881B0011CCE1 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3952205E2F92BD5700B57BD8 /* Kingfisher */; };
+		39E35D6A2F96881B0011CCE1 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = AA000001000000000000AA00 /* UIComponents */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		394CC4412F8F804D008ED326 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,8 +57,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3952205F2F92BD5700B57BD8 /* Kingfisher in Frameworks */,
-				AA000001000000000000AA01 /* UIComponents in Frameworks */,
+				39E35D6A2F96881B0011CCE1 /* UIComponents in Frameworks */,
+				39E35D692F96881B0011CCE1 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
